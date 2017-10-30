@@ -8,10 +8,10 @@ const reverseStr = (str) => {
   while (nums.length || symbols.length) {
     reversedStr.push(nums[0])
     nums.splice(0, 1)
-    //console.log(nums, 'nums')
+    // console.log(nums, 'nums')
     reversedStr.push(symbols[0])
     symbols.splice(0, 1)
-    //console.log(symbols, 'symbols')
+    // console.log(symbols, 'symbols')
   }
 
   return reversedStr.join('')
