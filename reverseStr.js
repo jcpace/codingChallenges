@@ -1,20 +1,19 @@
-// Reverse the string 1+23*3-220. Note: Numbers must be retained as is. Expected output: 220-3*23+1
-
-const reverseStr = (str) => {
-  let reversedStr = []
-  let nums = str.match(/[0-9]+/gi).reverse()
-  let symbols = str.match(/\W/gi).reverse()
-
-  while (nums.length || symbols.length) {
-    reversedStr.push(nums[0])
-    nums.splice(0, 1)
-    // console.log(nums, 'nums')
-    reversedStr.push(symbols[0])
-    symbols.splice(0, 1)
-    // console.log(symbols, 'symbols')
-  }
-
-  return reversedStr.join('')
+function reverseStr(str) {
+    const values = str.replace(/[^\d]/g, ' ').split(' ').reverse();
+    const ops = str.replace(/\d/g, '').split('').reverse();
+    const reversedStr = [];
+    while (values.length > 0) {
+        reversedStr.push(values.shift());
+        reversedStr.push(ops.shift() || '');
+    }
+    return reversedStr.join('');
 }
-let s = '1+23*3-220'
-console.log('end', reverseStr(s))
+
+console.log('end', reverseStr('1+23*3-220'))
+console.log('end', reverseStr(''))
+console.log('end', reverseStr('1'))
+console.log('end', reverseStr('a'))
+console.log('end', reverseStr('ab'))
+console.log('end', reverseStr('abc'))
+console.log('end', reverseStr('123'))
+console.log('end', reverseStr('123=/*@#%!#$^465413'))
