@@ -8,3 +8,5 @@ const isPalindrome = (str) => {
 }
 console.log(isPalindrome('A nut for a jar of tuna'))
 console.log(isPalindrome('racecar'))
+
+
