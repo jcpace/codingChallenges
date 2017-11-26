@@ -34,10 +34,10 @@ const letterCount = (str) => {
       result['word'] = prop
     }
   }
-  return result['count'] === 1 ? -1 : result['word']
+  return result['count'] === 1 ? -1 : 'The first word with the most repeating letters is ' + result['word']
 }
 
-console.log(letterCount('this is my sentence'))
+console.log(letterCount('today is the greatest day ever'))
 
 // split str into words array
 // loop array, declare variable for current word
