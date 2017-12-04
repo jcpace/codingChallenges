@@ -13,4 +13,24 @@ const findMissing = (arr) => {
   }
 }
 
+const findMissingInt = (arr) => {
+  // assuming the array is sorted
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] - arr[i + 1] !== 1) {
+      return arr[i] - 1
+    }
+  }
+}
+
+console.log(findMissingInt([1,2,3,4,6,7]))
+
+const findMissing2 = (arr) => {
+  let sortedArr = arr.sort((a, b) => {
+    return b - a
+  })
+  let first = sortedArr[0], last = sortedArr[sortedArr.length - 1]
+
+
+}
+
 console.log(findMissing(arr))
