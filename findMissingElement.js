@@ -1,6 +1,7 @@
-// Prompt:
-// Given an array of unsorted integers from 1 to 10, return the one number missing.
-let arr = [3, 7, 4, 9, 10, 2, 5, 1, 8]
+// PROMPT:
+// Given an array of unsorted integers from 1 to 5, return the one number missing.
+let arr = [1,2,3,5]
+
 const findMissing = (arr) => {
   let sortedArr = arr.sort((a, b) => {
     return b - a
@@ -22,15 +23,18 @@ const findMissingInt = (arr) => {
   }
 }
 
-console.log(findMissingInt([1,2,3,4,6,7]))
+console.log(findMissingInt(arr), 'findMissingInt')
 
 const findMissing2 = (arr) => {
-  let sortedArr = arr.sort((a, b) => {
-    return b - a
+  // add all integers in given array for sum
+  let sum = arr.reduce((a, b) => {
+    return a + b
   })
-  let first = sortedArr[0], last = sortedArr[sortedArr.length - 1]
-
-
+  console.log(sum, 'sum')
+  let totalSum = arr.length + 1 * (arr.length + 2) / 2
+  console.log(totalSum, 'totalsum')
+  return  sum - totalSum
 }
 
-console.log(findMissing(arr))
+
+console.log(findMissing2(arr, 'findMissinng2'))
