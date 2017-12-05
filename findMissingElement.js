@@ -28,10 +28,11 @@ console.log(findMissingInt(arr), 'findMissingInt')
 const findMissing2 = (arr) => {
   // add all integers in given array for sum
   let sum = arr.reduce((a, b) => {
-    return a + b
+    return (a + b)
   })
   console.log(sum, 'sum')
-  let totalSum = arr.length + 1 * (arr.length + 2) / 2
+  // consecutive number sum formula
+  let totalSum = (arr.length + 1 * arr.length + 2) / 2
   console.log(totalSum, 'totalsum')
   return  sum - totalSum
 }
