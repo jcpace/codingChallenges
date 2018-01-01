@@ -11,3 +11,7 @@
 const evenPairs = (str) => {
 
 }
+
+
+console.log(evenPairs('3gy41d216'))
+console.log(evenPairs('f09r27i8e67'))
