@@ -15,15 +15,18 @@ const LinkedList = () => {
   this.head = null
 }
 LinkedList.prototype.add = value => {
+  // create a new instance of Node
   let node = new Node(value)
+  // assign currentNode to the head of the list
   let currentNode = this.head
 
   // First-use case, an empty list
   if (!currentNode) {
+  // if list is empty intialize first node as head and increment counter / length                             
     this.head = node
     this.length++
   }
-
+  // if list is NOT empty
   while (currentNode.next) {
     currentNode = currentNode.next
   }
@@ -33,3 +36,5 @@ LinkedList.prototype.add = value => {
   return node
 
 }
+
+// work in progress...
